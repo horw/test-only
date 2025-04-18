@@ -12,7 +12,7 @@ jobs:
       issues: write
     steps:
       - name: Improve Issue Titles
-        uses: horw/issue-title-ai@ff88b2302d52d2b26a578288e7ec0da93d68c583
+        uses: horw/issue-title-ai@v0.1.1b
         with:
           github-token: ${{ github.token }}
           gemini-api-key: ${{ secrets.GEMINI_API_KEY }}
@@ -51,5 +51,4 @@ jobs:
             Your response should ONLY contain the improved issue title (or the original title if it's already good — with a monster sound if you like). Do not include any other text or explanation.
 
             ---
-
           skip-label: ai-title
