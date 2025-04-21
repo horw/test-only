@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: horw/issue-title-ai@v0.1.1b
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ github.token }}
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           days-to-scan: 7
           skip-label: 'good-title'
