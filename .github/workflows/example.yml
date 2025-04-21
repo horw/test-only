@@ -9,6 +9,8 @@ jobs:
   titles:
     timeout-minutes: 15
     runs-on: ubuntu-24.04
+    permissions:
+      issues: write
     steps:
       - uses: horw/issue-title-ai@v0.1.1b
         with:
