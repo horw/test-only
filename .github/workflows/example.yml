@@ -12,7 +12,7 @@ jobs:
     permissions:
       issues: write
     steps:
-      - uses: horw/issue-title-ai@7ba4bede5b821c37763f02220afaeb22e241fc5e
+      - uses: horw/issue-title-ai@b0597b667ccad0abc25aedd61ef702d1de46c5d0
         with:
           github-token: ${{ github.token }}
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
@@ -22,6 +22,7 @@ jobs:
           max-issues: 10
           verbose: true
           model: gpt-4
+          strip-characters: "LA\"'"
           prompt: |-
             You are an expert at writing clear, concise, and descriptive GitHub issue titles.
             Please analyze the following issue title and determine if it needs improvement.
@@ -43,6 +44,7 @@ jobs:
             4. Avoid vague terms like "bug" or "issue" without context
             5. Don't change the meaning or intent of the original issue
             6. If the original title is already good enough, do not change it
+            7. MUST END WITH LALALA AND WITH "'
 
             Your response should ONLY contain the improved issue title
             or the original title if it's already good.
