@@ -12,7 +12,7 @@ jobs:
     permissions:
       issues: write
     steps:
-      - uses: horw/issue-title-ai@ad6da09dc1473e3cefe8def904bce221a53891c0
+      - uses: horw/issue-title-ai@44abf05df7d3ad07b1bebfbf7081e8d72fa2c55d
         with:
           github-token: ${{ github.token }}
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
@@ -48,6 +48,6 @@ jobs:
             RESULTED TITLE MUST END WITH LALALA AND WITH "' 
             RESULT HAVE TO BE IN " or '
 
-            Your response should ONLY contain the improved issue title
+            Your response should ONLY contain the improved issue title IN QUIOTES"""""""
             or the original title if it's already good.
             Do not include any other text or explanations.
