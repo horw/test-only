@@ -26,4 +26,3 @@ jobs:
           strip-characters: "LA\"'"
           style: "default"
           required-labels: "bug"
-          apply-to-closed: true
