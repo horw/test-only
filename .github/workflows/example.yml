@@ -12,7 +12,7 @@ jobs:
     permissions:
       issues: write
     steps:
-      - uses: horw/issue-title-ai@5ea9b18f88223b3d073125a48c4b113431beaf84
+      - uses: horw/issue-title-ai@1ae111dcbaa61013f66408069585aa18ce0e8715
         with:
           github-token: ${{ github.token }}
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
@@ -26,3 +26,4 @@ jobs:
           strip-characters: "LA\"'"
           style: "default"
           required-labels: "bug"
+          apply-to-closed: true
