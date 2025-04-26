@@ -24,3 +24,4 @@ jobs:
           model: gpt-4
           quiet: true
           strip-characters: "LA\"'"
+          style: "summarization"
