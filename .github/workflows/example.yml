@@ -4,7 +4,7 @@ name: titles
     - cron: '0 0 * * *'
   workflow_dispatch:
   issues:
-    types: [ opened ]
+    types: [ opened, edited ]
 jobs:
   titles:
     timeout-minutes: 15
@@ -12,7 +12,7 @@ jobs:
     permissions:
       issues: write
     steps:
-      - uses: horw/issue-title-ai@e82f33ee4eea555ee71f66a34614c8d98317b10c
+      - uses: horw/issue-title-ai@145653d414fd743147991c66bbd341bf6b2331de
         with:
           github-token: ${{ github.token }}
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
