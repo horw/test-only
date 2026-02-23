@@ -12,7 +12,7 @@ jobs:
     permissions:
       issues: write
     steps:
-      - uses: horw/issue-title-ai@v0.1.7b
+      - uses: horw/issue-title-ai@c46caf3aae29b528f64984c704a27d6a37d7e8bb
         with:
           github-token: ${{ github.token }}
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
